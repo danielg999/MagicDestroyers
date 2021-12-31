@@ -1,0 +1,70 @@
+﻿<Properties StartupConfiguration="{C6251B49-40A2-4196-839A-A53EA2F7187A}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Characters/Melee/Knight.cs">
+    <Files>
+      <File FileName="Characters/Character.cs" Line="79" Column="10" IsPinned="True" />
+      <File FileName="PlayersInfo.cs" />
+      <File FileName="Characters/Melee/Malee.cs" />
+      <File FileName="Characters/Spellcasters/Spellcaster.cs" />
+      <File FileName="Characters/Melee/Assassin.cs" />
+      <File FileName="Characters/Melee/Knight.cs" Line="30" Column="14" />
+      <File FileName="Characters/Melee/Warrior.cs" />
+      <File FileName="Characters/Spellcasters/Druid.cs" />
+      <File FileName="Characters/Spellcasters/Mage.cs" />
+      <File FileName="Characters/Spellcasters/Necromancer.cs" />
+      <File FileName="Equipment/Equipment.cs" />
+      <File FileName="Equipment/Armors/Armor.cs" />
+      <File FileName="Equipment/Weapons/Weapon.cs" />
+      <File FileName="Equipment/Armors/Heavy/Heavy.cs" />
+      <File FileName="Equipment/Armors/Leather/Leather.cs" />
+      <File FileName="Equipment/Armors/Light/Light.cs" />
+      <File FileName="Equipment/Weapons/Blunt/Blunt.cs" />
+      <File FileName="Equipment/Weapons/Sharp/Sharp.cs" />
+      <File FileName="Equipment/Armors/Heavy/Chainlink.cs" />
+      <File FileName="Equipment/Armors/Leather/LightLeatherVest.cs" />
+      <File FileName="Equipment/Armors/Light/ClothRobe.cs" />
+      <File FileName="Equipment/Weapons/Blunt/Hammer.cs" />
+      <File FileName="Equipment/Weapons/Blunt/Staff.cs" />
+      <File FileName="Equipment/Weapons/Sharp/Axe.cs" />
+      <File FileName="Equipment/Weapons/Sharp/Sword.cs" />
+      <File FileName="EntryPoint.cs" />
+      <File FileName="Interfaces/IAttacking.cs" />
+      <File FileName="Interfaces/IDefending.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MagicDestroyers" expanded="True">
+            <Node name="MagicDestroyers" expanded="True">
+              <Node name="Characters" expanded="True">
+                <Node name="Melee" expanded="True">
+                  <Node name="Knight.cs" selected="True" />
+                </Node>
+                <Node name="Spellcasters" expanded="True" />
+              </Node>
+              <Node name="Enums" expanded="True" />
+              <Node name="Equipment" expanded="True">
+                <Node name="Armors" expanded="True">
+                  <Node name="Heavy" expanded="True" />
+                  <Node name="Leather" expanded="True" />
+                  <Node name="Light" expanded="True" />
+                </Node>
+                <Node name="Weapons" expanded="True">
+                  <Node name="Blunt" expanded="True" />
+                  <Node name="Sharp" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Interfaces" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.MagicDestroyers PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

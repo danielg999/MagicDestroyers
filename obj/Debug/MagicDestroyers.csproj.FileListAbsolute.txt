@@ -1,0 +1,7 @@
+/Users/danielgralik/Downloads/MagicDestroyers - Part 1/MagicDestroyers/obj/Debug/MagicDestroyers.csproj.AssemblyReference.cache
+/Users/danielgralik/Downloads/MagicDestroyers - Part 1/MagicDestroyers/obj/Debug/MagicDestroyers.csproj.CoreCompileInputs.cache
+/Users/danielgralik/Downloads/MagicDestroyers - Part 1/MagicDestroyers/bin/Debug/MagicDestroyers.exe.config
+/Users/danielgralik/Downloads/MagicDestroyers - Part 1/MagicDestroyers/bin/Debug/MagicDestroyers.exe
+/Users/danielgralik/Downloads/MagicDestroyers - Part 1/MagicDestroyers/bin/Debug/MagicDestroyers.pdb
+/Users/danielgralik/Downloads/MagicDestroyers - Part 1/MagicDestroyers/obj/Debug/MagicDestroyers.exe
+/Users/danielgralik/Downloads/MagicDestroyers - Part 1/MagicDestroyers/obj/Debug/MagicDestroyers.pdb
