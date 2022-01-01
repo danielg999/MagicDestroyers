@@ -5,7 +5,7 @@ namespace MagicDestroyers.Equipment.Armors
     {
         private int armorPoints;
 
-        protected virtual int ArmorPoints
+        public virtual int ArmorPoints
         {
             get
             {

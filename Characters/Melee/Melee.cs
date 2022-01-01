@@ -1,7 +1,7 @@
 ﻿using System;
 namespace MagicDestroyers.Characters.Melee
 {
-    public abstract class Malee : Character
+    public abstract class Melee : Character
     {
         private int abilityPoints;
 
@@ -24,7 +24,7 @@ namespace MagicDestroyers.Characters.Melee
             }
         }
 
-        public Malee(string name, int level, int healthPoints)
+        public Melee(string name, int level, int healthPoints)
             : base(name, level, healthPoints)
         {
 

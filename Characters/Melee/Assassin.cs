@@ -5,15 +5,8 @@ using System;
 
 namespace MagicDestroyers.Characters.Melee
 {
-    public class Assassin : Malee
+    public class Assassin : Melee
     {
-        private const int DEFAULT_LEVEL = 1;
-        private const int DEFAULT_HEALTH_POINTS = 100;
-        private const int DEFAULT_ABILITY_POINTS = 10;
-
-        private const string DEFAULT_NAME = "Assasin X";
-        private const Faction DEFAULT_FACTION = Faction.Malee;
-
         private LightLeatherVest bodyArmor;
         private Sword weapon;
 
@@ -87,13 +80,13 @@ namespace MagicDestroyers.Characters.Melee
         }
 
         public Assassin()
-            : this(DEFAULT_NAME, DEFAULT_LEVEL)
+            : this(Consts.Assassin.NAME, Consts.Assassin.LEVEL)
         {
 
         }
 
         public Assassin(string name, int level)
-            : this(name, level, DEFAULT_HEALTH_POINTS)
+            : this(name, level, Consts.Assassin.HEALTH_POINTS)
         {
 
         }
@@ -101,25 +94,40 @@ namespace MagicDestroyers.Characters.Melee
         public Assassin(string name, int level, int healthPoints)
             : base(name, level, healthPoints)
         {
-            base.Faction = DEFAULT_FACTION;
-            this.AbilityPoints = DEFAULT_ABILITY_POINTS;
-            this.Weapon = DEFAULT_WEAPON;
-            this.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Faction = Faction.Malee;
+            base.AbilityPoints = Consts.Assassin.ABILITY_POINTS;
+            base.Weapon = DEFAULT_WEAPON;
+            base.BodyArmor = DEFAULT_BODY_ARMOR;
         }
 
-        public void Raze()
+        public int Raze()
         {
             throw new NotImplementedException();
         }
 
-        public void BleedToDeath()
+        public int BleedToDeath()
         {
             throw new NotImplementedException();
         }
 
-        public void Survival()
+        public int Survival()
         {
             throw new NotImplementedException();
+        }
+
+        public override int Attack()
+        {
+            return this.Raze();
+        }
+
+        public override int SpecialAttack()
+        {
+            return this.BleedToDeath();
+        }
+
+        public override int Defend()
+        {
+            return this.Survival();
         }
     }
 }

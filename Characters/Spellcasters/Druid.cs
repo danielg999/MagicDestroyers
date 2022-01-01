@@ -10,13 +10,6 @@ namespace MagicDestroyers.Characters.Spellcasters
         private LightLeatherVest bodyArmor;
         private Staff weapon;
 
-        private const int DEFAULT_LEVEL = 1;
-        private const int DEFAULT_HEALTH_POINTS = 130;
-        private const int DEFAULT_MANA_POINTS = 18;
-
-        private const string DEFAULT_NAME = "Druid X";
-        private const Faction DEFAULT_FACTION = Faction.Spellcasters;
-
         private readonly LightLeatherVest DEFAULT_BODY_ARMOR = new LightLeatherVest();
         private readonly Staff DEFAULT_WEAPON = new Staff();
 
@@ -83,13 +76,13 @@ namespace MagicDestroyers.Characters.Spellcasters
         }
 
         public Druid()
-            : this(DEFAULT_NAME, DEFAULT_LEVEL)
+            : this(Consts.Druid.NAME, Consts.Druid.LEVEL)
         {
 
         }
 
         public Druid(string name, int level)
-            : this(name, level, DEFAULT_HEALTH_POINTS)
+            : this(name, level, Consts.Druid.HEALTH_POINTS)
         {
 
         }
@@ -97,25 +90,40 @@ namespace MagicDestroyers.Characters.Spellcasters
         public Druid(string name, int level, int healthPoints)
             : base(name, level, healthPoints)
         {
-            base.Faction = DEFAULT_FACTION;
-            this.ManaPoints = DEFAULT_MANA_POINTS;
+            base.Faction = Faction.Spellcasters;
+            this.ManaPoints = Consts.Druid.MANA_POINTS;
             this.Weapon = DEFAULT_WEAPON;
             this.BodyArmor = DEFAULT_BODY_ARMOR;
         }
 
-        public void Moonfire()
+        public int Moonfire()
         {
             throw new NotImplementedException();
         }
 
-        public void Starburst()
+        public int Starburst()
         {
             throw new NotImplementedException();
         }
 
-        public void OneWithTheNature()
+        public int OneWithTheNature()
         {
             throw new NotImplementedException();
+        }
+
+        public override int Attack()
+        {
+            return this.Moonfire();
+        }
+
+        public override int SpecialAttack()
+        {
+            return this.Starburst();
+        }
+
+        public override int Defend()
+        {
+            return this.OneWithTheNature();
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-namespace MagicDestroyers.Equipment.Armors.Light
+﻿namespace MagicDestroyers.Equipment.Armors.Light
 {
     public abstract class Light : Armor
     {

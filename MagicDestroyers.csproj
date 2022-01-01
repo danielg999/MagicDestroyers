@@ -60,7 +60,7 @@
     <Compile Include="Enums\Faction.cs" />
     <Compile Include="PlayersInfo.cs" />
     <Compile Include="Characters\Character.cs" />
-    <Compile Include="Characters\Melee\Malee.cs" />
+    <Compile Include="Characters\Melee\Melee.cs" />
     <Compile Include="Characters\Spellcasters\Spellcaster.cs" />
     <Compile Include="Equipment\Equipment.cs" />
     <Compile Include="Equipment\Armors\Armor.cs" />
@@ -72,6 +72,7 @@
     <Compile Include="Equipment\Weapons\Sharp\Sharp.cs" />
     <Compile Include="Interfaces\IAttacking.cs" />
     <Compile Include="Interfaces\IDefending.cs" />
+    <Compile Include="Consts.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

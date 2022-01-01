@@ -1,5 +1,4 @@
-﻿using System;
-namespace MagicDestroyers.Equipment.Armors.Leather
+﻿namespace MagicDestroyers.Equipment.Armors.Leather
 {
     public abstract class Leather : Armor
     {

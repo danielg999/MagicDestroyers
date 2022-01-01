@@ -3,6 +3,6 @@ namespace MagicDestroyers.Interfaces
 {
     public interface IDefending
     {
-        void Defend();
+        int Defend();
     }
 }

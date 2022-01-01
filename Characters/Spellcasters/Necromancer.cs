@@ -10,12 +10,7 @@ namespace MagicDestroyers.Characters.Spellcasters
         private LightLeatherVest bodyArmor;
         private Sword weapon;
 
-        private const int DEFAULT_LEVEL = 1;
-        private const int DEFAULT_HEALTH_POINTS = 120;
-        private const int DEFAULT_MANA_POINTS = 30;
-
-        private const string DEFAULT_NAME = "Necromancer X";
-        private const Faction DEFAULT_FACTION = Faction.Spellcasters;
+        
 
         private readonly LightLeatherVest DEFAULT_BODY_ARMOR = new LightLeatherVest();
         private readonly Sword DEFAULT_WEAPON = new Sword();
@@ -92,13 +87,13 @@ namespace MagicDestroyers.Characters.Spellcasters
         }
 
         public Necromancer()
-            : this(DEFAULT_NAME, DEFAULT_LEVEL)
+            : this(Consts.Necromancer.NAME, Consts.Necromancer.LEVEL)
         {
 
         }
 
         public Necromancer(string name, int level)
-            : this(name, level, DEFAULT_HEALTH_POINTS)
+            : this(name, level, Consts.Necromancer.HEALTH_POINTS)
         {
 
         }
@@ -106,25 +101,40 @@ namespace MagicDestroyers.Characters.Spellcasters
         public Necromancer(string name, int level, int healthPoints)
             : base(name, level, healthPoints)
         {
-            base.Faction = DEFAULT_FACTION;
-            this.ManaPoints = DEFAULT_MANA_POINTS;
+            base.Faction = Faction.Spellcasters;
+            this.ManaPoints = Consts.Necromancer.MANA_POINTS;
             this.Weapon = DEFAULT_WEAPON;
             this.BodyArmor = DEFAULT_BODY_ARMOR;
         }
 
-        public void ShadowRage()
+        public int ShadowRage()
         {
             throw new NotImplementedException();
         }
 
-        public void VampireTouch()
+        public int VampireTouch()
         {
             throw new NotImplementedException();
         }
 
-        public void BoneShield()
+        public int BoneShield()
         {
             throw new NotImplementedException();
+        }
+
+        public override int Attack()
+        {
+            return this.ShadowRage();
+        }
+
+        public override int SpecialAttack()
+        {
+            return this.VampireTouch();
+        }
+
+        public override int Defend()
+        {
+            return this.BoneShield();
         }
     }
 }

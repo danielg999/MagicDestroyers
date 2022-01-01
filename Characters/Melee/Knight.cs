@@ -9,17 +9,10 @@ using System.Threading.Tasks;
 
 namespace MagicDestroyers.Characters.Melee
 {
-    public class Knight : Malee
+    public class Knight : Melee
     {
         private Chainlink bodyArmor;
         private Hammer weapon;
-
-        private const int DEFAULT_LEVEL = 1;
-        private const int DEFAULT_HEALTH_POINTS = 120;
-        private const int DEFAULT_ABILITY_POINTS = 11;
-
-        private const string DEFAULT_NAME = "Knight X";
-        private const Faction DEFAULT_FACTION = Faction.Malee;
 
         private readonly Chainlink DEFAULT_BODY_ARMOR = new Chainlink();
         private readonly Hammer DEFAULT_WEAPON = new Hammer();
@@ -99,13 +92,13 @@ namespace MagicDestroyers.Characters.Melee
         }
 
         public Knight()
-            : this(DEFAULT_NAME, DEFAULT_LEVEL)
+            : this(Consts.Knight.NAME, Consts.Knight.LEVEL)
         {
 
         }
 
         public Knight(string name, int level)
-            : this(name, level, DEFAULT_HEALTH_POINTS)
+            : this(name, level, Consts.Knight.HEALTH_POINTS)
         {
 
         }
@@ -113,40 +106,40 @@ namespace MagicDestroyers.Characters.Melee
         public Knight(string name, int level, int healthPoints)
             : base(name, level, healthPoints)
         {
-            base.Faction = DEFAULT_FACTION;
-            this.AbilityPoints = DEFAULT_ABILITY_POINTS;
-            this.Weapon = DEFAULT_WEAPON;
-            this.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Faction = Faction.Malee;
+            base.AbilityPoints = Consts.Knight.ABILITY_POINTS;
+            base.Weapon = DEFAULT_WEAPON;
+            base.BodyArmor = DEFAULT_BODY_ARMOR;
         }
 
-        public void HolyBlow()
+        public int HolyBlow()
         {
             throw new NotImplementedException();
         }
 
-        public void PurifySoul()
+        public int PurifySoul()
         {
             throw new NotImplementedException();
         }
 
-        public void RighteousWings()
+        public int RighteousWings()
         {
             throw new NotImplementedException();
         }
 
-        public override void Attack()
+        public override int Attack()
         {
-            throw new NotImplementedException();
+            return this.HolyBlow();
         }
 
-        public override void SpecialAttack()
+        public override int SpecialAttack()
         {
-            throw new NotImplementedException();
+            return this.PurifySoul();
         }
 
-        public override void Defend()
+        public override int Defend()
         {
-            throw new NotImplementedException();
+            return this.RighteousWings();
         }
     }
 }

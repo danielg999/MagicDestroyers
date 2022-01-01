@@ -1,5 +1,4 @@
-﻿using System;
-namespace MagicDestroyers.Enums
+﻿namespace MagicDestroyers.Enums
 {
     public enum Faction
     {

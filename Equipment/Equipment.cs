@@ -1,5 +1,4 @@
-﻿using System;
-namespace MagicDestroyers.Equipment
+﻿namespace MagicDestroyers.Equipment
 {
     public class Equipment
     {

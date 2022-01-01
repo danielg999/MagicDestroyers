@@ -3,19 +3,19 @@ namespace MagicDestroyers.Equipment.Weapons
 {
     public abstract class Weapon : Equipment
     {
-        private int damage;
+        private int damagePoints;
 
-        protected virtual int Damage
+        public virtual int DamagePoints
         {
             get
             {
-                return this.damage;
+                return this.damagePoints;
             }
             set
             {
                 if (value >= 0)
                 {
-                    this.damage = value;
+                    this.damagePoints = value;
                 }
                 else
                 {
@@ -26,7 +26,7 @@ namespace MagicDestroyers.Equipment.Weapons
         public Weapon(int damage)
             : base()
         {
-            this.Damage = damage;
+            this.DamagePoints = damagePoints;
         }
     }
 }

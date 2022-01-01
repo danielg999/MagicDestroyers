@@ -1,5 +1,7 @@
 ﻿using System;
 using MagicDestroyers.Enums;
+using MagicDestroyers.Equipment.Armors;
+using MagicDestroyers.Equipment.Weapons;
 using MagicDestroyers.Interfaces;
 
 namespace MagicDestroyers.Characters
@@ -11,6 +13,11 @@ namespace MagicDestroyers.Characters
         private string name;
         private Faction faction;
 
+        private Armor bodyArmor;
+        private Weapon weapon;
+
+        private bool isAlive;
+        private int scores;
 
         public virtual int HealthPoints {
             get
@@ -22,6 +29,7 @@ namespace MagicDestroyers.Characters
                 this.healthPoints = value;
             }
         }
+
         public int Level
         {
             get
@@ -72,6 +80,51 @@ namespace MagicDestroyers.Characters
             }
         }
 
+        public Armor BodyArmor {
+            get
+            {
+                return this.bodyArmor;
+            }
+            set
+            {
+                this.bodyArmor = value;
+            }
+        }
+
+        public Weapon Weapon
+        {
+            get
+            {
+                return this.weapon;
+            }
+            set
+            {
+                this.weapon = value;
+            }
+        }
+
+        public bool IsAlive {
+            get
+            {
+                return this.isAlive;
+            }
+            set
+            {
+                this.isAlive = value;
+            }
+        }
+
+        public int Scores {
+            get
+            {
+                return this.scores;
+            }
+            set
+            {
+                this.scores = value;
+            }
+        }
+
         public Character(string name, int level)
         {
             this.Name = name;
@@ -83,8 +136,42 @@ namespace MagicDestroyers.Characters
             this.HealthPoints = healthPoints;
         }
 
-        public abstract void Attack();
-        public abstract void SpecialAttack();
-        public abstract void Defend();
+        public abstract int Attack();
+        public abstract int SpecialAttack();
+        public abstract int Defend();
+
+        public void TakeDamage(int damage, string attackerName)
+        {
+            if(this.Defend() < damage)
+            {
+                this.healthPoints = this.healthPoints - damage + this.Defend();
+                if(this.healthPoints <= 0)
+                {
+                    this.isAlive = false;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Haha! Your damage is not enough to hurt me!");
+            }
+
+            if (!this.isAlive)
+            {
+                Console.WriteLine($"{this.name} received {damage} damage from {attackerName} damage and is now dead!");
+            }
+            else
+            {
+                Console.WriteLine($"{this.name} received {damage} damage from {attackerName} damage and now has {this.healthPoints} health points!");
+            }
+        }
+
+        public void WonBattle()
+        {
+            this.scores++;
+            if(this.scores % 10 == 0)
+            {
+                this.level++;
+            }
+        }
     }
 }

@@ -10,12 +10,7 @@ namespace MagicDestroyers.Characters.Spellcasters
         private ClothRobe bodyArmor;
         private Staff weapon;
 
-        private const int DEFAULT_LEVEL = 1;
-        private const int DEFAULT_HEALTH_POINTS = 110;
-        private const int DEFAULT_MANA_POINTS = 36;
-
-        private const string DEFAULT_NAME = "Mage X";
-        private const Faction DEFAULT_FACTION = Faction.Spellcasters;
+        
 
         private readonly ClothRobe DEFAULT_BODY_ARMOR = new ClothRobe();
         private readonly Staff DEFAULT_WEAPON = new Staff();
@@ -95,13 +90,13 @@ namespace MagicDestroyers.Characters.Spellcasters
         }
 
         public Mage()
-            : this(DEFAULT_NAME, DEFAULT_LEVEL)
+            : this(Consts.Mage.NAME, Consts.Mage.LEVEL)
         {
 
         }
 
         public Mage(string name, int level)
-            : this(name, level, DEFAULT_HEALTH_POINTS)
+            : this(name, level, Consts.Mage.HEALTH_POINTS)
         {
 
         }
@@ -109,25 +104,42 @@ namespace MagicDestroyers.Characters.Spellcasters
         public Mage(string name, int level, int healthPoints)
             : base(name, level, healthPoints)
         {
-            base.Faction = DEFAULT_FACTION;
-            this.ManaPoints = DEFAULT_MANA_POINTS;
-            this.Weapon = DEFAULT_WEAPON;
-            this.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Faction = Faction.Spellcasters;
+            base.ManaPoints = Consts.Mage.MANA_POINTS;
+            base.Weapon = DEFAULT_WEAPON;
+            base.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.IsAlive = true;
+            base.Scores = 0;
         }
 
-        public void Fireball()
+        public int Fireball()
+        {
+            return base.Weapon.Damage + 10;
+        }
+
+        public int ArcaneWrath()
         {
             throw new NotImplementedException();
         }
 
-        public void ArcaneWrath()
+        public int Meditation()
         {
-            throw new NotImplementedException();
+            return base.BodyArmor.ArmorPoints + 5;
         }
 
-        public void Meditation()
+        public override int Attack()
         {
-            throw new NotImplementedException();
+            return this.Fireball();
+        }
+
+        public override int SpecialAttack()
+        {
+            return this.ArcaneWrath();
+        }
+
+        public override int Defend()
+        {
+            return this.Meditation();
         }
     }
 }
