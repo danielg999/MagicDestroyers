@@ -4,7 +4,7 @@ namespace MagicDestroyers.Equipment.Weapons.Blunt
     public class Staff : Blunt
     {
         public Staff()
-            : this(Consts.Blunt.DAMAGE_POINTS)
+            : this(Consts.Staff.DAMAGE_POINTS)
         {
 
         }
@@ -17,6 +17,10 @@ namespace MagicDestroyers.Equipment.Weapons.Blunt
         public void Empower()
         {
             throw new NotImplementedException();
+        }
+        public override void SpecialAbility()
+        {
+            this.Empower();
         }
     }
 }

@@ -1,11 +1,11 @@
 ﻿using System;
 namespace MagicDestroyers.Equipment.Armors
 {
-    public abstract class Armor : Equipment
+    public abstract class Armor
     {
         private int armorPoints;
 
-        public virtual int ArmorPoints
+        public int ArmorPoints
         {
             get
             {
@@ -24,7 +24,6 @@ namespace MagicDestroyers.Equipment.Armors
             }
         }
         public Armor(int armorPoints)
-            :base()
         {
             this.ArmorPoints = armorPoints;
         }

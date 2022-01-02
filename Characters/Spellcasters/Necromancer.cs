@@ -7,11 +7,6 @@ namespace MagicDestroyers.Characters.Spellcasters
 {
     public class Necromancer : Spellcaster
     {
-        private LightLeatherVest bodyArmor;
-        private Sword weapon;
-
-        
-
         private readonly LightLeatherVest DEFAULT_BODY_ARMOR = new LightLeatherVest();
         private readonly Sword DEFAULT_WEAPON = new Sword();
 
@@ -52,39 +47,6 @@ namespace MagicDestroyers.Characters.Spellcasters
                 }
             }
         }
-        public override Faction Faction {
-            get
-            {
-                return base.Faction;
-            }
-            set
-            {
-                base.Faction = value;
-            }
-        }
-
-        public LightLeatherVest BodyArmor {
-            get
-            {
-                return this.bodyArmor;
-            }
-            set
-            {
-                this.bodyArmor = value;
-            }
-        }
-
-        public Sword Weapon
-        {
-            get
-            {
-                return this.weapon;
-            }
-            set
-            {
-                this.weapon = value;
-            }
-        }
 
         public Necromancer()
             : this(Consts.Necromancer.NAME, Consts.Necromancer.LEVEL)
@@ -102,14 +64,16 @@ namespace MagicDestroyers.Characters.Spellcasters
             : base(name, level, healthPoints)
         {
             base.Faction = Faction.Spellcasters;
-            this.ManaPoints = Consts.Necromancer.MANA_POINTS;
-            this.Weapon = DEFAULT_WEAPON;
-            this.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.ManaPoints = Consts.Necromancer.MANA_POINTS;
+            base.Weapon = DEFAULT_WEAPON;
+            base.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.IsAlive = true;
+            base.Scores = 0;
         }
 
         public int ShadowRage()
         {
-            throw new NotImplementedException();
+            return base.Weapon.DamagePoints + 6;
         }
 
         public int VampireTouch()
@@ -119,7 +83,7 @@ namespace MagicDestroyers.Characters.Spellcasters
 
         public int BoneShield()
         {
-            throw new NotImplementedException();
+            return base.BodyArmor.ArmorPoints + 5;
         }
 
         public override int Attack()

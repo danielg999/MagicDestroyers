@@ -62,7 +62,6 @@
     <Compile Include="Characters\Character.cs" />
     <Compile Include="Characters\Melee\Melee.cs" />
     <Compile Include="Characters\Spellcasters\Spellcaster.cs" />
-    <Compile Include="Equipment\Equipment.cs" />
     <Compile Include="Equipment\Armors\Armor.cs" />
     <Compile Include="Equipment\Weapons\Weapon.cs" />
     <Compile Include="Equipment\Armors\Heavy\Heavy.cs" />
@@ -73,6 +72,7 @@
     <Compile Include="Interfaces\IAttacking.cs" />
     <Compile Include="Interfaces\IDefending.cs" />
     <Compile Include="Consts.cs" />
+    <Compile Include="Tools.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

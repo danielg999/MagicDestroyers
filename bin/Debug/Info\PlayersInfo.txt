@@ -1,0 +1,6 @@
+Warrior X,1,1
+Knight X,1,1
+Assasin X,0,1
+Mage X,1,1
+Necromancer X,1,1
+Druid X,1,1

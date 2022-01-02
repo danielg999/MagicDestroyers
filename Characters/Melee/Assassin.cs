@@ -7,9 +7,6 @@ namespace MagicDestroyers.Characters.Melee
 {
     public class Assassin : Melee
     {
-        private LightLeatherVest bodyArmor;
-        private Sword weapon;
-
         private readonly Sword DEFAULT_WEAPON = new Sword();
         private readonly LightLeatherVest DEFAULT_BODY_ARMOR = new LightLeatherVest();
 
@@ -43,41 +40,6 @@ namespace MagicDestroyers.Characters.Melee
                 }
             }
         }
-        public override Faction Faction
-        {
-            get
-            {
-                return base.Faction;
-            }
-            set
-            {
-                base.Faction = value;
-            }
-        }
-
-        public LightLeatherVest BodyArmor
-        {
-            get
-            {
-                return this.bodyArmor;
-            }
-            set
-            {
-                this.bodyArmor = value;
-            }
-        }
-
-        public Sword Weapon
-        {
-            get
-            {
-                return this.weapon;
-            }
-            set
-            {
-                this.weapon = value;
-            }
-        }
 
         public Assassin()
             : this(Consts.Assassin.NAME, Consts.Assassin.LEVEL)
@@ -98,11 +60,13 @@ namespace MagicDestroyers.Characters.Melee
             base.AbilityPoints = Consts.Assassin.ABILITY_POINTS;
             base.Weapon = DEFAULT_WEAPON;
             base.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.IsAlive = true;
+            base.Scores = 0;
         }
 
         public int Raze()
         {
-            throw new NotImplementedException();
+            return base.Weapon.DamagePoints + 8;
         }
 
         public int BleedToDeath()
@@ -112,7 +76,7 @@ namespace MagicDestroyers.Characters.Melee
 
         public int Survival()
         {
-            throw new NotImplementedException();
+            return base.BodyArmor.ArmorPoints + 4;
         }
 
         public override int Attack()

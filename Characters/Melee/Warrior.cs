@@ -7,9 +7,6 @@ namespace MagicDestroyers.Characters.Melee
 {
     public class Warrior : Melee
     {
-        private Chainlink bodyArmor;
-        private Axe weapon;
-
         private readonly Chainlink DEFAULT_BODY_ARMOR = new Chainlink();
         private readonly Axe DEFAULT_WEAPON = new Axe();
 
@@ -49,42 +46,6 @@ namespace MagicDestroyers.Characters.Melee
             }
         }
 
-        public override Faction Faction
-        {
-            get
-            {
-                return base.Faction;
-            }
-            set
-            {
-                 base.Faction = value;
-            }
-        }
-
-        public Chainlink BodyArmor
-        {
-            get
-            {
-                return this.bodyArmor;
-            }
-            set
-            {
-                this.bodyArmor = value;
-            }
-        }
-
-        public Axe Weapon
-        {
-            get
-            {
-                return this.weapon;
-            }
-            set
-            {
-                this.weapon = value;
-            }
-        }
-
         public Warrior()
             : this(Consts.Warrior.NAME, Consts.Warrior.LEVEL)
         {
@@ -110,7 +71,7 @@ namespace MagicDestroyers.Characters.Melee
 
         public int Strike()
         {
-            return base.Weapon.Damage + 10;
+            return base.Weapon.DamagePoints + 10;
         }
 
         public int Execute()
@@ -120,7 +81,7 @@ namespace MagicDestroyers.Characters.Melee
 
         public int SkinHarden()
         {
-            return base.BodyArmor.ArmorPoints + 5;
+            return base.BodyArmor.ArmorPoints + 4;
         }
 
         public override int Attack()

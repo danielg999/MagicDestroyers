@@ -7,9 +7,6 @@ namespace MagicDestroyers.Characters.Spellcasters
 {
     public class Druid : Spellcaster
     {
-        private LightLeatherVest bodyArmor;
-        private Staff weapon;
-
         private readonly LightLeatherVest DEFAULT_BODY_ARMOR = new LightLeatherVest();
         private readonly Staff DEFAULT_WEAPON = new Staff();
 
@@ -51,30 +48,6 @@ namespace MagicDestroyers.Characters.Spellcasters
             }
         }
 
-        public LightLeatherVest BodyArmor
-        {
-            get
-            {
-                return this.bodyArmor;
-            }
-            set
-            {
-                this.bodyArmor = value;
-            }
-        }
-
-        public Staff Weapon
-        {
-            get
-            {
-                return this.weapon;
-            }
-            set
-            {
-                this.weapon = value;
-            }
-        }
-
         public Druid()
             : this(Consts.Druid.NAME, Consts.Druid.LEVEL)
         {
@@ -91,14 +64,16 @@ namespace MagicDestroyers.Characters.Spellcasters
             : base(name, level, healthPoints)
         {
             base.Faction = Faction.Spellcasters;
-            this.ManaPoints = Consts.Druid.MANA_POINTS;
-            this.Weapon = DEFAULT_WEAPON;
-            this.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.ManaPoints = Consts.Druid.MANA_POINTS;
+            base.Weapon = DEFAULT_WEAPON;
+            base.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.IsAlive = true;
+            base.Scores = 0;
         }
 
         public int Moonfire()
         {
-            throw new NotImplementedException();
+            return base.Weapon.DamagePoints + 11;
         }
 
         public int Starburst()
@@ -108,7 +83,7 @@ namespace MagicDestroyers.Characters.Spellcasters
 
         public int OneWithTheNature()
         {
-            throw new NotImplementedException();
+            return base.BodyArmor.ArmorPoints + 5;
         }
 
         public override int Attack()

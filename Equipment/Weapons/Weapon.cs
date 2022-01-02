@@ -1,11 +1,11 @@
 ﻿using System;
 namespace MagicDestroyers.Equipment.Weapons
 {
-    public abstract class Weapon : Equipment
+    public abstract class Weapon
     {
         private int damagePoints;
 
-        public virtual int DamagePoints
+        public int DamagePoints
         {
             get
             {
@@ -23,10 +23,10 @@ namespace MagicDestroyers.Equipment.Weapons
                 }
             }
         }
-        public Weapon(int damage)
-            : base()
+        public Weapon(int damagePoints)
         {
             this.DamagePoints = damagePoints;
         }
+        public abstract void SpecialAbility();
     }
 }

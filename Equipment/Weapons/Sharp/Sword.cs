@@ -18,5 +18,9 @@ namespace MagicDestroyers.Equipment.Weapons.Sharp
         {
             throw new NotImplementedException();
         }
+        public override void SpecialAbility()
+        {
+            this.Bloodthirst();
+        }
     }
 }

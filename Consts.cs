@@ -55,7 +55,7 @@ namespace MagicDestroyers
         }
 
         // Weapon
-        public static class Blunt
+        public static class Staff
         {
             public static int DAMAGE_POINTS = 31;
         }
@@ -75,15 +75,15 @@ namespace MagicDestroyers
         // Armor
         public static class Chainlink
         {
-            public const int ARMOR_POINTS = 33;
+            public const int ARMOR_POINTS = 10;
         }
         public static class LightLeatherVest
         {
-            public const int ARMOR_POINTS = 30;
+            public const int ARMOR_POINTS = 12;
         }
         public static class ClothRobe
         {
-            public const int ARMOR_POINTS = 28;
+            public const int ARMOR_POINTS = 11;
         }
     }
 }

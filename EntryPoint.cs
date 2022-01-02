@@ -13,18 +13,14 @@ namespace MagicDestroyers
             Random rng = new Random();
             bool gameOver = false;
 
-            int currentMelee = 0;
-            int currentSpellcaster = 0;
+            Melee currentMelee;
+            Spellcaster currentSpellcaster;
             List<Character> characters = new List<Character>()
             {
                 new Warrior(),
-                //new Warrior(),
-                //new Warrior(),
                 new Knight(),
                 new Assassin(),
                 new Mage(),
-                //new Mage(),
-                //new Mage()
                 new Necromancer(),
                 new Druid()
             };
@@ -42,55 +38,48 @@ namespace MagicDestroyers
 
             while (!gameOver)
             {
-                currentMelee = rng.Next(0, meleeTeam.Count);
-                currentSpellcaster = rng.Next(0, spellTeam.Count);
+                currentMelee = meleeTeam[rng.Next(0, meleeTeam.Count)];
+                currentSpellcaster = spellTeam[rng.Next(0, spellTeam.Count)];
 
-                spellTeam[currentSpellcaster].TakeDamage(meleeTeam[0].Attack(), meleeTeam[currentMelee].Name);
+                currentSpellcaster.TakeDamage(currentMelee.Attack(), currentMelee.Name, currentMelee.GetType().ToString());
 
-                if (!spellTeam[currentSpellcaster].IsAlive)
+                if (!currentSpellcaster.IsAlive)
                 {
-                    meleeTeam[currentMelee].WonBattle();
-                    spellTeam.Remove(spellTeam[currentSpellcaster]);
+                    currentMelee.WonBattle();
+                    spellTeam.Remove(currentSpellcaster);
                     if(spellTeam.Count == 0)
                     {
-                        Console.WriteLine("Melee team wins!");
+                        Tools.ColorfullWriteLine("\nMelee team wins!", ConsoleColor.Red);
                         break;
                     }
                     else
                     {
-                        currentSpellcaster = rng.Next(0, spellTeam.Count);
+                        currentSpellcaster = spellTeam[rng.Next(0, spellTeam.Count)];
                     }
                     
                 }
-                // 3.1 Check if the character died and remove him from the team
-                // 3.2 If dead, get another character from the team
 
-                meleeTeam[currentMelee].TakeDamage(spellTeam[currentSpellcaster].Attack(), spellTeam[0].Name);
-                if (!meleeTeam[currentMelee].IsAlive)
+                currentMelee.TakeDamage(currentSpellcaster.Attack(), currentSpellcaster.Name, currentSpellcaster.GetType().ToString());
+                if (!currentMelee.IsAlive)
                 {
-                    spellTeam[currentSpellcaster].WonBattle();
-                    meleeTeam.Remove(meleeTeam[currentMelee]);
+                    currentSpellcaster.WonBattle();
+                    meleeTeam.Remove(currentMelee);
                     if (meleeTeam.Count == 0)
                     {
-                        Console.WriteLine("Spell team wins!");
+                        Tools.ColorfullWriteLine("\nSpell team wins!", ConsoleColor.Red);
                         break;
                     }
                     else
                     {
-                        currentMelee = rng.Next(0, meleeTeam.Count);
+                        currentMelee = meleeTeam[rng.Next(0, meleeTeam.Count)];
                     }
                 }
-
-                // 4. Spellcaster attacks Melee
-                // 4.1 Check if the character died and remove him from the team
-                // 4.2 If dead, get another character from the team
-
-                // 5. If no characters are alive from either of the teams gameOver = true
-
-
             }
-        }
 
-        // Wonder about fields od armor and weapon in classes mage, warrior etc.
+            PlayersInfo.UpdateFullInfo(characters);
+            PlayersInfo.Save(characters);
+            PlayersInfo.PrintFullInfo();
+
+        }
     }
 }

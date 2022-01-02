@@ -2,18 +2,11 @@
 using MagicDestroyers.Equipment.Armors.Heavy;
 using MagicDestroyers.Equipment.Weapons.Blunt;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MagicDestroyers.Characters.Melee
 {
     public class Knight : Melee
     {
-        private Chainlink bodyArmor;
-        private Hammer weapon;
-
         private readonly Chainlink DEFAULT_BODY_ARMOR = new Chainlink();
         private readonly Hammer DEFAULT_WEAPON = new Hammer();
 
@@ -55,42 +48,6 @@ namespace MagicDestroyers.Characters.Melee
             }
         }
 
-        public override Faction Faction
-        {
-            get
-            {
-                return base.Faction;
-            }
-            set
-            {
-                base.Faction = value;
-            }
-        }
-
-        public Chainlink BodyArmor
-        {
-            get
-            {
-                return this.bodyArmor;
-            }
-            set
-            {
-                this.bodyArmor = value;
-            }
-        }
-
-        public Hammer Weapon
-        {
-            get
-            {
-                return this.weapon;
-            }
-            set
-            {
-                this.weapon = value;
-            }
-        }
-
         public Knight()
             : this(Consts.Knight.NAME, Consts.Knight.LEVEL)
         {
@@ -110,11 +67,13 @@ namespace MagicDestroyers.Characters.Melee
             base.AbilityPoints = Consts.Knight.ABILITY_POINTS;
             base.Weapon = DEFAULT_WEAPON;
             base.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.IsAlive = true;
+            base.Scores = 0;
         }
 
         public int HolyBlow()
         {
-            throw new NotImplementedException();
+            return base.Weapon.DamagePoints + 7;
         }
 
         public int PurifySoul()
@@ -124,7 +83,7 @@ namespace MagicDestroyers.Characters.Melee
 
         public int RighteousWings()
         {
-            throw new NotImplementedException();
+            return base.BodyArmor.ArmorPoints + 5;
         }
 
         public override int Attack()

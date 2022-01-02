@@ -1,36 +1,37 @@
 ﻿<Properties StartupConfiguration="{C6251B49-40A2-4196-839A-A53EA2F7187A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Consts.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Equipment/Weapons/Weapon.cs">
     <Files>
-      <File FileName="Characters/Character.cs" Line="168" Column="32" IsPinned="True" />
-      <File FileName="PlayersInfo.cs" />
-      <File FileName="Characters/Spellcasters/Spellcaster.cs" />
-      <File FileName="Characters/Melee/Assassin.cs" />
-      <File FileName="Characters/Melee/Knight.cs" />
-      <File FileName="Characters/Melee/Warrior.cs" />
-      <File FileName="Characters/Spellcasters/Druid.cs" />
-      <File FileName="Characters/Spellcasters/Mage.cs" />
-      <File FileName="Characters/Spellcasters/Necromancer.cs" />
-      <File FileName="Equipment/Equipment.cs" />
-      <File FileName="Equipment/Armors/Armor.cs" />
-      <File FileName="Equipment/Weapons/Weapon.cs" />
-      <File FileName="Equipment/Armors/Heavy/Heavy.cs" />
+      <File FileName="Characters/Character.cs" Line="145" Column="1" IsPinned="True" />
+      <File FileName="PlayersInfo.cs" Line="1" Column="1" />
+      <File FileName="Characters/Spellcasters/Spellcaster.cs" Line="1" Column="1" />
+      <File FileName="Characters/Melee/Assassin.cs" Line="93" Column="1" />
+      <File FileName="Characters/Melee/Knight.cs" Line="117" Column="39" />
+      <File FileName="Characters/Melee/Warrior.cs" Line="110" Column="1" />
+      <File FileName="Characters/Spellcasters/Druid.cs" Line="111" Column="50" />
+      <File FileName="Characters/Spellcasters/Mage.cs" Line="127" Column="46" />
+      <File FileName="Characters/Spellcasters/Necromancer.cs" Line="122" Column="50" />
+      <File FileName="Equipment/Armors/Armor.cs" Line="28" Column="1" />
+      <File FileName="Equipment/Weapons/Weapon.cs" Line="26" Column="34" />
+      <File FileName="Equipment/Armors/Heavy/Heavy.cs" Line="1" Column="1" />
       <File FileName="Equipment/Armors/Leather/Leather.cs" />
       <File FileName="Equipment/Armors/Light/Light.cs" />
-      <File FileName="Equipment/Weapons/Blunt/Blunt.cs" />
-      <File FileName="Equipment/Weapons/Sharp/Sharp.cs" />
-      <File FileName="Equipment/Armors/Heavy/Chainlink.cs" />
+      <File FileName="Equipment/Weapons/Blunt/Blunt.cs" Line="1" Column="1" />
+      <File FileName="Equipment/Weapons/Sharp/Sharp.cs" Line="1" Column="1" />
+      <File FileName="Equipment/Armors/Heavy/Chainlink.cs" Line="13" Column="13" />
       <File FileName="Equipment/Armors/Leather/LightLeatherVest.cs" />
       <File FileName="Equipment/Armors/Light/ClothRobe.cs" />
-      <File FileName="Equipment/Weapons/Blunt/Hammer.cs" />
-      <File FileName="Equipment/Weapons/Blunt/Staff.cs" />
-      <File FileName="Equipment/Weapons/Sharp/Axe.cs" />
-      <File FileName="Equipment/Weapons/Sharp/Sword.cs" />
-      <File FileName="EntryPoint.cs" />
-      <File FileName="Interfaces/IAttacking.cs" />
-      <File FileName="Interfaces/IDefending.cs" />
-      <File FileName="Characters/Melee/Melee.cs" />
-      <File FileName="Enums/Faction.cs" />
-      <File FileName="Consts.cs" Line="6" Column="9" />
+      <File FileName="Equipment/Weapons/Blunt/Hammer.cs" Line="1" Column="1" />
+      <File FileName="Equipment/Weapons/Blunt/Staff.cs" Line="12" Column="32" />
+      <File FileName="Equipment/Weapons/Sharp/Axe.cs" Line="1" Column="1" />
+      <File FileName="Equipment/Weapons/Sharp/Sword.cs" Line="1" Column="1" />
+      <File FileName="EntryPoint.cs" Line="66" Column="59" />
+      <File FileName="Interfaces/IAttacking.cs" Line="1" Column="1" />
+      <File FileName="Interfaces/IDefending.cs" Line="1" Column="1" />
+      <File FileName="Characters/Melee/Melee.cs" Line="1" Column="1" />
+      <File FileName="Enums/Faction.cs" Line="1" Column="1" />
+      <File FileName="Consts.cs" Line="1" Column="1" />
+      <File FileName="Tools.cs" />
+      <File FileName="App.config" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -51,10 +52,10 @@
                 <Node name="Weapons" expanded="True">
                   <Node name="Blunt" expanded="True" />
                   <Node name="Sharp" expanded="True" />
+                  <Node name="Weapon.cs" selected="True" />
                 </Node>
               </Node>
               <Node name="Interfaces" expanded="True" />
-              <Node name="Consts.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -65,7 +66,19 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.MagicDestroyers PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/danielgralik/Downloads/MagicDestroyers - Part 1/MagicDestroyers/EntryPoint.cs" relfile="EntryPoint.cs" line="50" column="1" />
+      <Breakpoint file="/Users/danielgralik/Downloads/MagicDestroyers - Part 1/MagicDestroyers/EntryPoint.cs" relfile="EntryPoint.cs" line="66" column="1" />
+      <Breakpoint file="/Users/danielgralik/Downloads/MagicDestroyers - Part 1/MagicDestroyers/EntryPoint.cs" relfile="EntryPoint.cs" line="80" column="1" />
+      <Breakpoint file="/Users/danielgralik/Downloads/MagicDestroyers - Part 1/MagicDestroyers/Characters/Character.cs" relfile="Characters/Character.cs" line="145" column="1" />
+      <Breakpoint file="/Users/danielgralik/Downloads/MagicDestroyers - Part 1/MagicDestroyers/Characters/Character.cs" relfile="Characters/Character.cs" line="147" column="1" />
+      <Breakpoint file="/Users/danielgralik/Downloads/MagicDestroyers - Part 1/MagicDestroyers/EntryPoint.cs" relfile="EntryPoint.cs" line="48" column="1" />
+      <Breakpoint file="/Users/danielgralik/Downloads/MagicDestroyers - Part 1/MagicDestroyers/Characters/Melee/Warrior.cs" relfile="Characters/Melee/Warrior.cs" line="110" column="1" />
+      <Breakpoint file="/Users/danielgralik/Downloads/MagicDestroyers - Part 1/MagicDestroyers/Characters/Melee/Warrior.cs" relfile="Characters/Melee/Warrior.cs" line="120" column="1" />
+      <Breakpoint file="/Users/danielgralik/Downloads/MagicDestroyers - Part 1/MagicDestroyers/Characters/Melee/Warrior.cs" relfile="Characters/Melee/Warrior.cs" line="102" column="1" />
+      <Breakpoint file="/Users/danielgralik/Downloads/MagicDestroyers - Part 1/MagicDestroyers/Characters/Melee/Warrior.cs" relfile="Characters/Melee/Warrior.cs" line="103" column="1" />
+      <Breakpoint file="/Users/danielgralik/Downloads/MagicDestroyers - Part 1/MagicDestroyers/Equipment/Armors/Armor.cs" relfile="Equipment/Armors/Armor.cs" line="28" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

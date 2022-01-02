@@ -4,7 +4,7 @@ namespace MagicDestroyers.Equipment.Weapons.Blunt
     public class Hammer : Blunt
     {
         public Hammer()
-            : this(Consts.Blunt.DAMAGE_POINTS)
+            : this(Consts.Hammer.DAMAGE_POINTS)
         {
 
         }
@@ -17,6 +17,10 @@ namespace MagicDestroyers.Equipment.Weapons.Blunt
         public void Stun()
         {
             throw new NotImplementedException();
+        }
+        public override void SpecialAbility()
+        {
+            this.Stun();
         }
     }
 }

@@ -7,11 +7,6 @@ namespace MagicDestroyers.Characters.Spellcasters
 {
     public class Mage : Spellcaster
     {
-        private ClothRobe bodyArmor;
-        private Staff weapon;
-
-        
-
         private readonly ClothRobe DEFAULT_BODY_ARMOR = new ClothRobe();
         private readonly Staff DEFAULT_WEAPON = new Staff();
 
@@ -53,42 +48,6 @@ namespace MagicDestroyers.Characters.Spellcasters
             }
         }
 
-        public override Faction Faction
-        {
-            get
-            {
-                return base.Faction;
-            }
-            set
-            {
-                base.Faction = value;
-            }
-        }
-
-        public ClothRobe BodyArmor
-        {
-            get
-            {
-                return this.bodyArmor;
-            }
-            set
-            {
-                this.bodyArmor = value;
-            }
-        }
-
-        public Staff Weapon
-        {
-            get
-            {
-                return this.weapon;
-            }
-            set
-            {
-                this.weapon = value;
-            }
-        }
-
         public Mage()
             : this(Consts.Mage.NAME, Consts.Mage.LEVEL)
         {
@@ -114,7 +73,7 @@ namespace MagicDestroyers.Characters.Spellcasters
 
         public int Fireball()
         {
-            return base.Weapon.Damage + 10;
+            return base.Weapon.DamagePoints + 8;
         }
 
         public int ArcaneWrath()
